@@ -7,6 +7,9 @@
         \Route::get('signin', 'User\AuthController@getSignIn');
         \Route::post('signin', 'User\AuthController@postSignIn');
 
+        \Route::get('login', 'User\AuthController@getSignIn');
+        \Route::post('login', 'User\AuthController@postSignIn');
+
         \Route::get('signin/facebook', 'User\FacebookServiceAuthController@redirect');
         \Route::get('signin/facebook/callback', 'User\FacebookServiceAuthController@callback');
 

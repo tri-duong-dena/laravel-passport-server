@@ -2,8 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Route;
+use Laravel\Passport\Passport;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -34,6 +35,7 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapUserRoutes();
         $this->mapAdminRoutes();
         $this->mapApiRoutes();
+        Passport::routes();
 
         //
     }
@@ -46,7 +48,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapUserRoutes()
     {
         Route::group([
-            'middleware' => 'user',
+            'middleware' => 'web',
             'namespace' => $this->namespace,
         ], function ($router) {
             require base_path('routes/user.php');

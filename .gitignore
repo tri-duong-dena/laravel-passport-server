@@ -31,3 +31,6 @@ storage/debugbar/
 ingore.php
 
 public/static/swagger-ui
+
+storage/oauth-private.key
+storage/oauth-public.key

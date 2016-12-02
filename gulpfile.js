@@ -1,5 +1,6 @@
 var elixir = require('laravel-elixir');
 
+require('laravel-elixir-vue-2');
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -13,5 +14,6 @@ var elixir = require('laravel-elixir');
 
 elixir.config.css.outputFolder = 'static/user/css/app.css';
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.sass('app.scss')
+    .webpack('app.js');
 });

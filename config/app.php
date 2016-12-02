@@ -193,6 +193,9 @@ return [
         App\Providers\ServiceBindServiceProvider::class,
         App\Providers\HelperBindServiceProvider::class,
 
+        // passport
+        Laravel\Passport\PassportServiceProvider::class,
+
     ], $additionalProviders),
 
     /*
