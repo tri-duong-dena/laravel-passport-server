@@ -1,4 +1,4 @@
-# This sample app is based on boiler plate: https://github.com/takaaki-mizuno/laravel-boilerplate
+* This sample app is based on boiler plate: https://github.com/takaaki-mizuno/laravel-boilerplate
 
 # Install Laravel passport
 * composer update
