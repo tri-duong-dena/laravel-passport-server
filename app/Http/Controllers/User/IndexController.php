@@ -11,4 +11,10 @@ class IndexController extends Controller
         return view('pages.user.index', [
         ]);
     }
+
+    public function redux()
+    {
+        return view('pages.user.redux', [
+        ]);
+    }
 }

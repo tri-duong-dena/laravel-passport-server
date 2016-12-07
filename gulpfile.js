@@ -1,6 +1,6 @@
 var elixir = require('laravel-elixir');
+elixir.config.js.browserify.transformers[0].options.stage = 0
 
-require('laravel-elixir-vue-2');
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -14,6 +14,6 @@ require('laravel-elixir-vue-2');
 
 elixir.config.css.outputFolder = 'static/user/css/app.css';
 elixir(function(mix) {
-    mix.sass('app.scss')
-    .webpack('app.js');
+    mix.sass('app.scss');
+    mix.browserify('appredux.js');
 });
