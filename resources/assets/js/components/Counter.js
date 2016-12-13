@@ -25,11 +25,14 @@ class Counter extends Component {
       'X-CSRF-TOKEN': Laravel.csrfToken
     }
     })
-        .then((result) => result.json())
-        .then((resultJson) => {
-            console.log(resultJson)
-            console.log(resultJson.email)
-        })
+    .then((result) => result.json())
+    .then((resultJson) => {
+        console.log(resultJson)
+        console.log(resultJson.email)
+    })
+    .catch((error) => {
+      console.log('error while fetching: ' + error);
+    })
   }
 
   render() {

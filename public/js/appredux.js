@@ -21489,6 +21489,8 @@ var Counter = (function (_Component) {
       }).then(function (resultJson) {
         console.log(resultJson);
         console.log(resultJson.email);
+      })['catch'](function (error) {
+        console.log('error while fetching: ' + error);
       });
     }
   }, {
